@@ -1,0 +1,11 @@
+{
+  "name": "@EldarAkhmetov/test_package_upload",
+  "version": "1.0.0",
+  "description": "testing packages more than 500MB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
