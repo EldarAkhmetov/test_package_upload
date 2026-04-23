@@ -1,0 +1,24 @@
+name: Clean Packages Smart
+
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write  
+jobs:
+  clean_docker_packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug access
+        run: |
+          curl -I \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/user
+      - name: Clean Docker Packages Smart
+        uses: smartsquaregmbh/delete-old-packages@v1.0.0
+        with:
+          user: EldarAkhmetov
+          type: npm
+          semver-pattern: "<3.x"
+          names: |
+            test_package_upload
