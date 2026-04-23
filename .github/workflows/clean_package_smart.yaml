@@ -19,6 +19,6 @@ jobs:
         with:
           user: EldarAkhmetov
           type: npm
-          semver-pattern: "<3.x"
+          semver-pattern: "<3"
           names: |
             test_package_upload
